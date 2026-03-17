@@ -5,7 +5,7 @@ const myProjects = [
         desc: "A simple chess board gme, with on screen graphics",
         stack: ["JavaScript", "React", "Vite"],
         url: "https://mychessgame.com",
-        image: "/screenshots/chess.png",
+        image: "/screenshots/chess-small.png",
         github: "https//githublink.com"
 
     },
@@ -15,8 +15,8 @@ const myProjects = [
         desc: "A mobile first recycling support app",
         stack: ["JavaScript", "React", "Vite"],
         url: "https://myrecycling.com",
-        image: "/screenshots/recycle.png",
-        github: "https:o//githublink2.com"
+        image: "/screenshots/chess-small.png",
+        github: "https://githublink2.com"
 
     }
 ]

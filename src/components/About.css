@@ -1,0 +1,11 @@
+.selfie-img {
+    width: 16rem;
+    height: 16rem;
+    max-width: 32rem;
+    border-radius: 50%
+}
+
+p.taglinetext {
+    font-style: italic;
+    margin-top: -1rem;
+}
