@@ -1,0 +1,49 @@
+/*reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --background-color: #111111;
+    --surface: #1e1e1e;
+    --nav-bar: #1a1a1a;
+    --border: #2a2a2a;
+    --accent: #5eead4;
+    --text: #f1f5f9;
+    --text-muted: #a1a1a1;
+    --font-body: Roboto;
+    --font-heading: Orbitron;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text);
+}
+
+h3 {
+    font-size: 2.1rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h1 {
+    font-size: 3.7rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading), system-ui, sans-serif
+}
