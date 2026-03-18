@@ -1,0 +1,32 @@
+#skillssection {
+    padding: 4rem 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    list-style: none;
+    margin-top: 2rem;
+
+}
+
+.skill-badge {
+    background: var(--surface);
+    color: var(--text);
+    border-left: 3px solid var(--surface);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    transition: all 0.2s ease;
+
+}
+
+.skill-badge:hover {
+    border-left-color: var(--accent);
+    background: #2a2a2a;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+
+
+}

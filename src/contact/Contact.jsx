@@ -4,6 +4,8 @@ import ConfirmationMessage from "./ConfirmationMessage.jsx";
 import {FaGithub} from "react-icons/fa6";
 import {FaLinkedin} from "react-icons/fa6";
 import {FaEnvelope} from "react-icons/fa6";
+import {FaSquareWhatsapp} from "react-icons/fa6";
+import {FaSquarePhone} from "react-icons/fa6";
 import './Contact.css'
 
 
@@ -29,21 +31,42 @@ export default function Contact() {
 
 
     return (
-        <section id="contactsection">
+        <section id="contact">
             <div className="container">
                 <h2>Get in touch</h2>
-                <p>My Full name</p>
-                <p>My email & phone number</p>
-                <FaGithub/>
-                <FaLinkedin/>
-                <FaEnvelope/>
-                {contactFormVisible && <ContactForm
-                    handleSubmitMessage={handleSubmitMessage}
-                />}
-                {confirmMessageFormVisible && <ConfirmationMessage
-                    handleMessageOK={handleMessageOK}
-                />}
+                <h3>John Does Web - full stack development</h3>
+                <div className="social-icons">
+                    <div className="contact-item">
+                        <FaSquarePhone className="social-icon"/><span className="contact-tt">+353 (0)8X XXX XXXX</span>
+                    </div>
+                    <div className="contact-item">
+                        <FaEnvelope className="social-icon"/><span className="contact-tt">john@wec.com</span>
+                    </div>
+                    <div className="contact-item">
+                        <FaSquareWhatsapp className="social-icon"/><span
+                        className="contact-tt">+353 (0)8X XXX XXXX</span>
+                    </div>
+                    <div className="contact-item">
+                        <FaGithub className="social-icon"/><span
+                        className="contact-tt">https://johns-github-repo.com</span>
+                    </div>
+                    <div className="contact-item">
+                        <FaLinkedin className="social-icon"/><span
+                        className="contact-tt">https://johns-linkedin.com</span>
+                    </div>
+
+                </div>
+                <div className="send-message">
+                    <button className="message-button">Send a message</button>
+                </div>
             </div>
+            {contactFormVisible && <ContactForm
+                handleSubmitMessage={handleSubmitMessage}
+            />}
+            {confirmMessageFormVisible && <ConfirmationMessage
+                handleMessageOK={handleMessageOK}
+            />}
+
         </section>
     )
 

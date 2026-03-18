@@ -30,7 +30,6 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text);
-    padding: 0 2rem 2rem 2rem;
     min-width: 320px;
 
 }
@@ -69,6 +68,8 @@ ul {
 }
 
 .container {
+    padding: 0 2rem 2rem 2rem;
+
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
