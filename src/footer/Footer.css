@@ -1,4 +1,4 @@
-nav .social-icons {
+footer .social-icons {
     position: sticky;
     z-index: 1000;
     background-color: var(--nav-bar);
@@ -9,13 +9,12 @@ nav .social-icons {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0;
-
 }
 
-.contact-item:hover {
-    color: var(--accent);
-    cursor: pointer;
-}
+/*.contact-item:hover {*/
+/*    color: var(--accent);*/
+/*    cursor: pointer;*/
+/*}*/
 
 footer {
     position: fixed;
@@ -31,17 +30,13 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-
-}
-
-.contact-item {
     position: relative;
 }
 
 .contact-tt {
     display: none;
     position: absolute;
-    top: -50%;
+    top: -100%;
     transform: translateY(-50%);
     background: var(--surface);
     border: 1px solid var(--accent);
@@ -49,11 +44,27 @@ footer {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     white-space: nowrap;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .contact-item:hover .contact-tt {
     display: block;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: inherit; /* Inherits the 2.4rem from the parent */
+    color: inherit; /* Inherits the white/gray color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Keeps the tooltip positioned correctly */
 }
 
 
@@ -61,7 +72,7 @@ footer {
 
     .contact-tt {
 
-        font-size: 1.0rem;
+        font-size: 1.2rem;
     }
 
 }

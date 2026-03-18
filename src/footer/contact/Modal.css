@@ -1,0 +1,54 @@
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modalBox {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/*.modalMessage {*/
+/*    font-family: "Press Start 2P", system-ui, sans-serif;*/
+/*    font-size: 1rem;*/
+/*    text-align: center;*/
+/*    color: #3b60b9;*/
+/*}*/
+
+.modalButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*.modalButton {*/
+/*    font-family: "Press Start 2P", system-ui, sans-serif;*/
+/*    font-size: 0.8rem;*/
+/*    padding: 0.8rem 1.4rem;*/
+/*    background-color: #3b60b9;*/
+/*    color: white;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 .2em gray;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.modalButton:active {*/
+/*    box-shadow: none;*/
+/*    position: relative;*/
+/*    top: .2rem;*/
+/*}*/
