@@ -1,6 +1,82 @@
+.card-left, .card-right {
+    display: flex;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.card-left .project-img {
+    margin-right: 1rem;
+}
+
+.card-left {
+    flex-direction: row;
+
+}
+
+.card-right {
+    flex-direction: row-reverse;
+}
+
+
 .project-img {
-    width: 12rem;
-    height: auto;
-    max-width: 24rem;
+    max-width: 50%;
     border-radius: 1rem;
+    border: 2px solid var(--accent)
+}
+
+.card-content {
+    flex: 1;
+    padding: 1rem 2rem 0 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+}
+
+.tech-badge {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: var(--text-muted)
+}
+
+.card-content a:hover {
+    text-decoration: none;
+    color: var(--accent)
+}
+
+.tech-badge:hover {
+    box-shadow: 0 0 1rem var(--accent);
+
+}
+
+@media (max-width: 767px) {
+    .card-left, .card-right {
+        flex-direction: column;
+    }
+
+    .project-img {
+
+        max-width: 35%;
+        margin-bottom: 1rem;
+    }
+
+    .card-content {
+
+        padding: 0;
+    }
 }

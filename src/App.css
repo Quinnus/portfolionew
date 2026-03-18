@@ -36,24 +36,24 @@ body {
 }
 
 h3 {
-    font-size: 2.1rem;
+    font-size: 1.6rem;
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
 }
 
 h1 {
-    font-size: 3.7rem;
+    font-size: 3.2rem;
 }
 
 h1, h2, h3 {
     font-family: var(--font-heading), system-ui, sans-serif
 }
 
-p {
-    margin: 1rem 0;
-}
+/*p {*/
+/*    margin: 1rem 0;*/
+/*}*/
 
 
 ul {
@@ -62,12 +62,14 @@ ul {
 
 @media (min-width: 768px) {
     body {
-        font-size: 2.8rem;
+        font-size: 1.8rem;
         line-height: 1.6;
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
     }
 
 }
 
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}

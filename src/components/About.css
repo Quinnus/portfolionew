@@ -1,11 +1,49 @@
-.selfie-img {
+
+#selfie-img {
     width: 16rem;
     height: 16rem;
     max-width: 32rem;
-    border-radius: 50%
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    margin-left: 2em;
 }
 
 p.taglinetext {
     font-style: italic;
-    margin-top: -1rem;
+
+}
+
+#aboutsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 2rem;
+    align-items: center;
+
+}
+
+.profile-image {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #selfie-img {
+        margin: 0;
+        width: 12rem;
+        height: 12rem;
+        max-width: 24rem;
+    }
+
+
 }

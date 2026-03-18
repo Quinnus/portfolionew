@@ -5,7 +5,9 @@ nav {
     background-color: var(--nav-bar);
     box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.8);
     flex-wrap: wrap;
-    font-size: 4rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--accent);
 }
 
 .nav-links {
@@ -22,9 +24,6 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    height: 100%;
-
-
 }
 
 button.hamburgerbutton {
@@ -35,19 +34,31 @@ button.hamburgerbutton {
     outline: none;
 }
 
+button.burgermenuicon {
+    width: fit-content;
+    border: none;
+    background: none;
+    padding-top: 0.2rem;
+    outline: none;
+    color: var(--accent);
+}
+
 .nav-open {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     background-color: var(--nav-bar);
-    padding: 1rem;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     position: absolute;
     top: 100%;
     left: 0;
     box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.8);
+}
 
+.nav-open a {
+    color: var(--accent);
+    text-decoration: none;
 }
 
 .nav-closed {
@@ -58,11 +69,21 @@ button.hamburgerbutton {
     display: none;
 }
 
+nav ul li a svg {
+    width: 2rem;
+    height: 2cscscsrem;
+}
+
 @media (min-width: 768px) {
+    nav {
+        font-size: 3rem;
+        color: var(--accent);
+    }
+
     .nav-closed {
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .nav-open {
@@ -76,18 +97,10 @@ button.hamburgerbutton {
     .nav-closed a, .nav-open a {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        font-size: 1.4rem;
+        gap: 1rem;
+        font-size: 1.8rem;
         color: var(--accent);
         text-decoration: none;
-    }
-
-    .nav-closed a svg, .nav-open a svg {
-        font-size: 2rem;
-    }
-
-    .dropdownmenu {
-
     }
 
     .burgermenuicon {
@@ -96,5 +109,14 @@ button.hamburgerbutton {
 
     .burgercloseicon {
         display: none;
+    }
+
+    ul li a svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .nav-label {
+        display: inline;
     }
 }

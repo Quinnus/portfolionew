@@ -30,18 +30,20 @@ export default function Contact() {
 
     return (
         <section id="contactsection">
-            <h2>Get in touch</h2>
-            <p>My Full name</p>
-            <p>My email & phone number</p>
-            <FaGithub/>
-            <FaLinkedin/>
-            <FaEnvelope/>
-            {contactFormVisible && <ContactForm
-                handleSubmitMessage={handleSubmitMessage}
-            />}
-            {confirmMessageFormVisible && <ConfirmationMessage
-                handleMessageOK={handleMessageOK}
-            />}
+            <div className="container">
+                <h2>Get in touch</h2>
+                <p>My Full name</p>
+                <p>My email & phone number</p>
+                <FaGithub/>
+                <FaLinkedin/>
+                <FaEnvelope/>
+                {contactFormVisible && <ContactForm
+                    handleSubmitMessage={handleSubmitMessage}
+                />}
+                {confirmMessageFormVisible && <ConfirmationMessage
+                    handleMessageOK={handleMessageOK}
+                />}
+            </div>
         </section>
     )
 

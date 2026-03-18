@@ -18,7 +18,7 @@ export default function Navbar() {
     return (
         <nav className="nav-links">
 
-            <span className="logo">&lt;JD /&gt;</span>
+            <span className="logo">&lt;JQ /&gt;</span>
 
             <div className="dropdownmenu">
                 <button className="hamburgerbutton"><HamburgerMenu handleHamburgerClick={handleHamburgerMenu}
