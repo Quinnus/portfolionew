@@ -9,9 +9,11 @@
     padding: 0;
 }
 
-html {
-    min-width: 320px;
-    overflow-x: auto;
+
+html, body {
+    max-width: 100vw; /* Use vw to be explicit */
+    overflow-x: hidden;
+    position: relative;
 }
 
 :root {
@@ -46,7 +48,7 @@ body {
     color: var(--text);
     min-width: 320px;
     position: relative;
-    width: 100%;
+    width: 100vw;
 }
 
 h3 {
@@ -85,4 +87,9 @@ ul {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
+}
+
+main {
+    overflow-x: hidden; /* Encapsulate all sections */
+    width: 100%;
 }

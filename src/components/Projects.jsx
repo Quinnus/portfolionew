@@ -15,13 +15,13 @@ export default function Projects() {
 
                         initial={{
                             opacity: 0,
-                            transform: index % 2 === 0 ? "translateX(-16rem)" : "translateX(16rem)"
+                            transform: index % 2 === 0 ? "translateX(-10rem)" : "translateX(10rem)"
                         }}
                         whileInView={{
                             opacity: 1,
                             transform: "translateX(0px)"
                         }}
-                        viewport={{once: false, margin: "-100px"}}
+                        viewport={{once: false, margin: "-20px"}}
                         transition={{
                             duration: 1.6,
                             ease: [0.22, 1, 0.36, 1],
