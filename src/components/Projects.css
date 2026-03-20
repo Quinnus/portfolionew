@@ -1,0 +1,92 @@
+.card-left, .card-right {
+    display: flex;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+    will-change: transform, opacity;
+    contain: layout;
+}
+
+.card-left .project-img {
+    margin: 0 2.4rem 0 1rem;
+}
+
+.card-left {
+    flex-direction: row;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+
+.card-right {
+    flex-direction: row-reverse;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+
+
+.project-img {
+    max-width: 32vh;
+    border-radius: 1rem;
+    border: 2px solid var(--accent);
+
+}
+
+p.projectname {
+    margin-bottom: 1.2rem;
+}
+
+.card-content {
+    flex: 1;
+    padding: 0 2rem 0 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.tech-badge {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+}
+
+
+.tech-badge:hover {
+    transition: all 0.2s ease;
+
+    box-shadow: 0 0 1rem var(--accent);
+
+}
+
+.project-img {
+    object-fit: contain;
+    max-height: 50%;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .card-left, .card-right {
+        flex-direction: column;
+    }
+
+    .card-content {
+        padding: 0;
+    }
+
+    .project-img {
+        margin-bottom: 2rem !important;
+        margin-right: 0 !important;
+    }
+}
