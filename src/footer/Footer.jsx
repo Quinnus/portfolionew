@@ -59,7 +59,7 @@ export default function Footer() {
 
                 <div className="contact-item">
                     <button className="icon-button" onClick={handleSendMessageClick}><FaEnvelope
-                        className="social-icon"/><span className="contact-tt">Send a message</span>
+                        className="social-icon"/><span className="contact-tt">Message</span>
                     </button>
                 </div>
             </div>

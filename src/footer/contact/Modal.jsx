@@ -1,6 +1,7 @@
 import './Modal.css'
 import {useState} from "react";
 import ConfirmationMessage from "./ConfirmationMessage.jsx";
+import emailjs from '@emailjs/browser';
 
 export default function Modal(props) {
 
@@ -8,9 +9,30 @@ export default function Modal(props) {
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
+    const [userBudget, setUserBudget] = useState("");
 
 
     const setSendEnabled = userName !== "" && userEmail !== "" && userMessage !== "";
+
+    async function handleClickSend() {
+        try {
+            await emailjs.send(
+                'service_qfb8mto',
+                'template_cnj82c6',
+                {
+                    userName: userName,
+                    userEmail: userEmail,
+                    userBudget: userBudget,
+                    userMessage: userMessage,
+                },
+                'C4cldcXX1GmjePKhs'
+            );
+            setConfirmationVisible(true);
+
+        } catch (error) {
+            console.error('EmailJS error:', error);
+        }
+    }
 
 
     return (
@@ -33,7 +55,8 @@ export default function Modal(props) {
                                        onChange={(e) => setUserEmail(e.target.value)}
                                 ></input>
                                 <label htmlFor="your-budget-input">Budget: </label>
-                                <select id="your-budget-input">
+                                <select id="your-budget-input"
+                                        onChange={(e) => setUserBudget(e.target.value)}>
                                     <option value="">--Choose a value (optional)--</option>
                                     <option value="low">upto $/€/£1,000</option>
                                     <option value="med">upto $/€/£3,000</option>
@@ -44,7 +67,7 @@ export default function Modal(props) {
                                 <textarea rows="4" cols="35" id="your-message-input"
                                           onChange={(e) => setUserMessage(e.target.value)}/>
                                 <div className="actionButtons">
-                                    <button type="submit" disabled={!setSendEnabled}>Send
+                                    <button type="submit" disabled={!setSendEnabled} onClick={handleClickSend}>Send
                                     </button>
                                     <button type="button" onClick={props.handleCancelClick}>Cancel</button>
                                 </div>

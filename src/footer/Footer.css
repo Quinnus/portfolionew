@@ -7,8 +7,10 @@ footer .social-icons {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    gap: 2rem;
+    /*gap: 2rem;*/
     margin: 0;
+    justify-content: space-evenly;
+
 }
 
 

@@ -4,12 +4,12 @@
     border: 2px solid var(--border);
     border-radius: 2rem;
     padding: 2rem;
-    margin-bottom: 2rem;
-
+    margin-bottom: 3rem;
+    align-items: center;
 }
 
 .card-left .project-img {
-    margin-right: 1rem;
+    margin: 0 2.4rem 0 1rem;
 }
 
 .card-left {
@@ -23,21 +23,22 @@
 
 
 .project-img {
-    max-width: 50%;
+    max-width: 32vh;
     border-radius: 1rem;
-    border: 2px solid var(--accent)
+    border: 2px solid var(--accent);
+
 }
 
 .card-content {
     flex: 1;
-    padding: 1rem 2rem 0 1rem;
+    padding: 0 2rem 0 1rem;
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 1rem 0;
 }
 
 .tech-badge {
@@ -46,6 +47,10 @@
     color: var(--accent);
     padding: 0.3rem 1rem;
     border-radius: 2rem;
+}
+
+.projectname {
+    margin-bottom: 1rem;
 }
 
 .card-content a {
@@ -65,19 +70,23 @@
 
 }
 
+.project-img {
+    object-fit: contain;
+    max-height: 50%;
+    width: auto;
+}
+
 @media (max-width: 767px) {
     .card-left, .card-right {
         flex-direction: column;
     }
 
-    .project-img {
-
-        max-width: 35%;
-        margin-bottom: 1rem;
+    .card-content {
+        padding: 0;
     }
 
-    .card-content {
-
-        padding: 0;
+    .project-img {
+        margin-bottom: 2rem;
+        margin-right: 0 !important;
     }
 }

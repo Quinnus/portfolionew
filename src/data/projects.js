@@ -2,21 +2,18 @@ const myProjects = [
     {
         id: "001",
         name: "Homelab",
-        desc: "A simple chess board game, with on screen graphics",
-        stack: ["JavaScript", "React", "Vite"],
-        url: "https://mychessgame.com",
-        image: "/screenshots/chess-small.png",
-        github: "https//githublink.com"
+        desc: "My first attempt at setting up a homelab.  I undertook this at the same time I upgraded the home network, with a TP-Link Omada setup.  Homepage (https://gethomepage.dev) is an amazing resource, providing a static landing page or pages, with a straightforward YAML configuration.  A low power mini-PC runs the system, which includes DNS-level content filtering, media serving (via Plex), and a number of other useful services.  It's my homepage, which I can access via Tailscale.",
+        stack: ["CSS", "Docker", "HTML", "YAML"],
+        image: "/screenshots/homelab.png",
 
     },
     {
         id: "002",
         name: "Yes We Can",
-        desc: "A mobile first recycling support app",
-        stack: ["JavaScript", "React", "Vite"],
-        url: "https://myrecycling.com",
-        image: "/screenshots/chess-small.png",
-        github: "https://githublink2.com"
+        desc: "A mobile-first recycling support app",
+        stack: ["JavaScript", "React", "CSS", "HTML", "Vercel"],
+        image: "/screenshots/ywc.png",
+
 
     },
     {
@@ -25,7 +22,7 @@ const myProjects = [
         desc: "A colorful TTT game using react",
         stack: ["Java", "CSS", "HTML"],
         url: "https://myrecycling.com",
-        image: "/screenshots/chess-small.png",
+        image: "/screenshots/TTT.png",
         github: "https://githublink2.com"
 
     },
@@ -35,7 +32,7 @@ const myProjects = [
         desc: "A react powered version of the classic game",
         stack: ["JavaScript", "React", "CSS", "HTML"],
         url: "https://myrecycling.com",
-        image: "/screenshots/chess-small.png",
+        image: "/screenshots/hang.png",
         github: "https://githublink2.com"
 
     },

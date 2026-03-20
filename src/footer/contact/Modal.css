@@ -93,9 +93,20 @@ div button {
 div button:hover {
     color: var(--accent);
     border-color: var(--accent);
+    cursor: pointer;
 }
 
 div button:disabled {
     border-color: red;
     color: var(--text-muted);
+    cursor: auto;
+}
+
+@media (max-width: 480px) {
+    .modalBox {
+        width: 90vw;
+        padding: 1rem;
+    }
+
+
 }
