@@ -9,10 +9,10 @@ function App() {
     return (
         <main>
             <Header/>
-            <About id="aboutsection"/>
-            <Projects id="projectssection"/>
-            <Skills id="skillssection"/>
-            <footer><Footer id="contactsection"/></footer>
+            <About/>
+            <Projects/>
+            <Skills/>
+            <Footer/>
         </main>
 
 

@@ -17,16 +17,15 @@ export default function Modal(props) {
     async function handleClickSend() {
         try {
             await emailjs.send(
-                'service_qfb8mto',
-                'template_cnj82c6',
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 {
                     userName: userName,
                     userEmail: userEmail,
                     userBudget: userBudget,
                     userMessage: userMessage,
                 },
-                'C4cldcXX1GmjePKhs'
-            );
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
             setConfirmationVisible(true);
 
         } catch (error) {
@@ -37,8 +36,9 @@ export default function Modal(props) {
 
     return (
         <div className="modalOverlay" onClick={props.handleCancelClick}>
-            <form form onSubmit={(e) => {
+            <form onSubmit={async (e) => {
                 e.preventDefault();
+                await handleClickSend();
                 setConfirmationVisible(true);
             }}>
                 <div className="modalBox" onClick={(e) => e.stopPropagation()}>
@@ -67,7 +67,7 @@ export default function Modal(props) {
                                 <textarea rows="4" cols="35" id="your-message-input"
                                           onChange={(e) => setUserMessage(e.target.value)}/>
                                 <div className="actionButtons">
-                                    <button type="submit" disabled={!setSendEnabled} onClick={handleClickSend}>Send
+                                    <button type="submit" disabled={!setSendEnabled}>Send
                                     </button>
                                     <button type="button" onClick={props.handleCancelClick}>Cancel</button>
                                 </div>

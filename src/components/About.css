@@ -76,10 +76,7 @@ section#aboutsection {
     }
 
     section#aboutsection {
-        display: flex;
-        padding: 0;
         margin-bottom: 1rem;
-
     }
 
 }

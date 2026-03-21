@@ -90,6 +90,6 @@ ul {
 }
 
 main {
-    overflow-x: hidden; /* Encapsulate all sections */
+    overflow-x: hidden;
     width: 100%;
 }

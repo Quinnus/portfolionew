@@ -30,16 +30,6 @@ option {
 
 }
 
-
-.modalButtons {
-    display: flex;
-    gap: 1rem;
-}
-
-.modalmessage {
-    align-items: stretch;
-}
-
 textarea {
     resize: vertical;
     font-size: 1.5rem;
@@ -73,12 +63,12 @@ select {
 
 }
 
-footer div {
+footer.actionbuttons {
     display: flex;
     justify-content: space-between;
 }
 
-div button {
+.actionButtons button {
     color: var(--text);
     background-color: var(--background-color);
     font-size: 1.6rem;

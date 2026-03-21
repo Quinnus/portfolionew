@@ -21,17 +21,3 @@
     text-align: center;
 }
 
-
-@media (min-width: 768px) {
-
-    ul li a svg {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .nav-label {
-        display: inline;
-    }
-
-
-}
