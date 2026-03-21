@@ -3,15 +3,11 @@
     background: var(--surface);
     border: 2px solid var(--border);
     border-radius: 2rem;
-    padding: 3rem;
-    margin-bottom: 4rem;
+    padding: 3rem 3rem 3rem 2rem;
+    margin-bottom: 3rem;
     align-items: center;
     will-change: transform, opacity;
     contain: layout;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    perspective: 1000px;
-
 }
 
 .card-left .project-img {
@@ -83,26 +79,4 @@ p.projectname {
         margin-bottom: 2rem !important;
         margin-right: 0 !important;
     }
-}
-
-.card-left:last-of-type,
-.card-right:last-of-type {
-    margin-bottom: 0;
-}
-
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    /* Tightened top margin to 1.5rem */
-    margin: 1.5rem 0 1rem 0;
-}
-
-#projectssection .card-left:last-of-type,
-#projectssection .card-right:last-of-type {
-    margin-bottom: 0; /* Prevents double-spacing at the bottom of the section */
-}
-
-#projectssection h2 {
-    margin-bottom: 2rem;
 }

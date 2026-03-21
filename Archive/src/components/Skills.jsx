@@ -12,7 +12,7 @@ export default function Skills() {
     return (
         <section id="skillssection">
             <div className="container">
-                <h2>Skills & capabilities</h2>
+                <h2>Skills & Capabilities</h2>
                 <div className="organized-rows">
                     {categories.map((cat) => (
                         <div key={cat.id} className="skill-row">
@@ -39,7 +39,7 @@ export default function Skills() {
                                                 type: "spring",
                                                 stiffness: 150, // Higher stiffness = faster snap
                                                 damping: 18,    // Higher damping = less "jiggling"
-                                                delay: index * 0.15 // Increased delay to 0.15s to clear space
+                                                delay: index * 0.2 // Increased delay to 0.15s to clear space
                                             }}
                                         >
                                             {skill.name}

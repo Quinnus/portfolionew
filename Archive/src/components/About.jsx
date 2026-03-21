@@ -8,7 +8,7 @@ export default function About() {
 
         <section id="aboutsection">
             <div className="container">
-                <h2>A bit about me</h2>
+                <h1>A bit about me</h1>
 
                 <div className="about-me">
                     <div className="profile-image">

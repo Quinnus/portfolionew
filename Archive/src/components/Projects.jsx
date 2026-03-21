@@ -8,7 +8,6 @@ export default function Projects() {
 
         <section id="projectssection">
             <div className="container">
-                <h2>Some things I've worked on</h2>
                 {projects.map((p, index) => (
                     <motion.div
                         key={p.id}
