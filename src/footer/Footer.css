@@ -1,16 +1,37 @@
 footer .social-icons {
-    position: sticky;
     z-index: 1000;
     background-color: var(--nav-bar);
     font-size: 2.4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%;
-    /*gap: 2rem;*/
     margin: 0;
-    justify-content: space-evenly;
+    justify-content: center;
+}
 
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0; /* Removed horizontal padding to prevent pushing the icon */
+    position: relative;
+    /* Force every item to occupy the exact same amount of space */
+    flex: 1;
+    max-width: 80px; /* Adjust this to control how far apart they are */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    /* Ensures the icon stays in the middle of the .contact-item */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -25,21 +46,12 @@ footer {
 
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    padding: 1rem 0.5rem;
-    position: relative;
-    flex: 0 1 auto;
-    min-width: 0;
-
-}
-
 .contact-tt {
     display: none;
     position: absolute;
-    top: -100%;
-    transform: translateY(-50%);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
     background: var(--surface);
     border: 1px solid var(--accent);
     color: var(--text);
@@ -47,6 +59,7 @@ footer {
     border-radius: 0.5rem;
     white-space: nowrap;
     font-size: 1.4rem;
+    pointer-events: none;
 }
 
 .contact-item:hover .contact-tt {
@@ -54,21 +67,6 @@ footer {
     cursor: pointer;
 }
 
-.icon-button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    font-size: inherit;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    max-width: 100%;
-
-}
 
 .icon-button:hover {
     color: var(--accent);
@@ -83,4 +81,6 @@ footer {
     }
 
 }
+
+
 
