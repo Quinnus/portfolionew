@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <div className="nav-links">
             <ScrollIndicator/>
-            <h1 className="logo">John Does Web &#123;full-stack*&#125;</h1>
+            <span className="logo">John Does Web &#123;full-stack*&#125;</span>
         </div>)
 }
 

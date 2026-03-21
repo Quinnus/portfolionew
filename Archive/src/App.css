@@ -1,4 +1,5 @@
-/* Reset and Base */
+/*reset*/
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -8,21 +9,12 @@
     padding: 0;
 }
 
-html {
-    font-size: 62.5%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: visible;
-    /* Hide scrollbar visually while keeping function */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
 
-html::-webkit-scrollbar {
-    display: none;
+html, body {
+    max-width: 100vw; /* Use vw to be explicit */
+    overflow-x: hidden;
+    position: relative;
 }
-
 
 :root {
     --background-color: #111111;
@@ -37,8 +29,6 @@ html::-webkit-scrollbar {
 
     font-size: 62.5%;
 
-    --section-spacing: clamp(6rem, 10vh, 10rem);
-
     --fs-body: clamp(1.6rem, calc(0.4vw + 1.45rem), 1.8rem);
     --fs-h1: clamp(3.2rem, calc(3.5vw + 1.8rem), 4.8rem);
     --fs-h2: clamp(2.4rem, calc(2.5vw + 1.4rem), 3.6rem);
@@ -48,6 +38,7 @@ html::-webkit-scrollbar {
     --lh-header: 1.2;
 }
 
+
 body {
     font-family: var(--font-body), system-ui, sans-serif;
     font-size: var(--fs-body);
@@ -56,22 +47,19 @@ body {
     background-color: var(--background-color);
     color: var(--text);
     min-width: 320px;
-    /* Critical Fix: changed from 100vw to 100% */
-    width: 100%;
-    margin: 0;
-    padding: 0;
     position: relative;
-    /* Keep visible to allow Header to stick */
-    overflow-x: visible;
+    width: 100vw;
 }
 
 h3 {
     font-family: var(--font-heading), system-ui, sans-serif;
     font-size: var(--fs-h3);
     line-height: var(--lh-header);
+
     margin-bottom: 1.0rem;
 }
 
+/* prettier-ignore */
 h2 {
     font-family: var(--font-heading), system-ui, sans-serif;
     font-size: var(--fs-h2);
@@ -79,44 +67,29 @@ h2 {
     margin-bottom: 1.2rem;
 }
 
+/* prettier-ignore */
 h1 {
     font-family: var(--font-heading), system-ui, sans-serif;
     font-size: var(--fs-h1);
     line-height: var(--lh-header);
-    margin-bottom: 0.4rem;
-    padding: 0 2rem;
+
+    margin-bottom: 1.6rem;
 }
+
 
 ul {
     list-style-type: none
 }
 
+
 .container {
-    /* Removes bottom padding to prevent double-spacing */
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 0 2rem 2rem 2rem;
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
 }
 
 main {
-    /* Use 'clip' to hide stray elements without breaking the sticky context */
-    overflow-x: clip;
+    overflow-x: hidden;
     width: 100%;
-}
-
-section {
-    /* Standardizes the gap above every section */
-    padding: 0;
-    width: 100%;
-}
-
-@media (max-width: 767px) {
-
-    .container {
-        /* Removes bottom padding to prevent double-spacing */
-        padding: 2rem 2rem 2rem 2rem;
-
-    }
-
 }
