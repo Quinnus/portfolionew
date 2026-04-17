@@ -51,7 +51,7 @@ p.projectname {
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
-    
+
 }
 
 .tech-badge {
@@ -60,11 +60,12 @@ p.projectname {
     color: var(--accent);
     padding: 0.3rem 1rem;
     border-radius: 2rem;
+    transition: all 0.2s ease;
 }
 
 
 .tech-badge:hover {
-    transition: all 0.2s ease;
+
 
     box-shadow: 0 0 1rem var(--accent);
 
@@ -100,4 +101,10 @@ p.projectname {
 
 #projectssection h2 {
     margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: .2s ease all;
 }
