@@ -2,14 +2,9 @@ const myProjects = [
     {
         id: "001",
         name: "Homelab",
-        desc: "My first attempt at setting up a homelab.  I undertook this at the same time " +
-            "I upgraded the home network, with a TP-Link Omada setup.  " +
-            "Homepage is an amazing resource, providing a static landing page or pages, " +
-            "with a straightforward YAML configuration.  A low power mini-PC runs the system, which includes DNS-level " +
-            "content filtering, media serving (via Plex), and a number of other useful services. " +
-            " It's my homepage, which I can access via Tailscale.",
+        desc: "A self-hosted homelab running 24/7 on a low-power mini-PC. Containerised services managed via Docker, including DNS-level content filtering, media serving (Plex), and a private dashboard accessible remotely via Tailscale.  Network built on TP-Link Omada.",
         url: "https://gethomepage.dev",
-        stack: ["CSS", "Docker", "HTML", "YAML"],
+        stack: ["Networking", "Docker", "HTML", "YAML"],
         image: "/screenshots/homelab.png",
 
     },
@@ -17,7 +12,7 @@ const myProjects = [
         id: "002",
         name: "Yes We Can",
         desc: "This was one of the first apps I created, as a university assignment.  " +
-            "Its a simple concept - keep track of how much money you save or throw away by recycling or dumping drink containers.  " +
+            "It's a simple concept - keep track of how much money you save or throw away by recycling or dumping drink containers.  " +
             "The app includes a barcode scanner for product information, and utilises a firestore database for recording totals.  ",
         url: "https://yeswecan.cloud",
         stack: ["JavaScript", "React", "CSS", "HTML"],
@@ -28,8 +23,8 @@ const myProjects = [
     {
         id: "003",
         name: "Simon",
-        desc: "My plan is to recreate every classic game (maybe...), this time its 80's favourite Simon.  " +
-            "This was less complex than Hangman, requiring a relatively simple setup of randomly generated numbers corresponding to a colour.  These were then matched to corresponding (ai-generted) images, to show the quadrants lighting up.  Aparrently the original game maxxed out at a sequence of colours.  This will keep going forever, probably....",
+        desc: "My plan is to recreate every classic game (maybe...), this time its 80s favourite Simon.  " +
+            "This was less complex than Hangman, requiring a relatively simple setup of randomly generated numbers corresponding to a colour.  These were then matched to corresponding (ai-generated) images, to show the quadrants lighting up.  Apparently the original game was limited to a maximum sequence of 31 colours.  This will keep going forever, probably....",
         url: "https://simon-pivt.vercel.app",
         stack: ["JavaScript", "React", "CSS", "HTML"],
         image: "/screenshots/simon.png",
@@ -55,9 +50,9 @@ const myProjects = [
             "utilising SCRUM methodology, as well as deliver a working application.  " +
             "The idea came from helping people without transport visit recycling depots " +
             "- the friend with a car or van who would provide a lift.  " +
-            "From there is went on to include various local tradespeople, including the original 'man-with-a-van'.",
+            "From there it went on to include various local tradespeople, including the original 'man-with-a-van'.",
         url: "https://trade-connect.help",
-        stack: ["JavaScript", "React", "CSS", "HTML"],
+        stack: ["JavaScript", "React", "Scrum"],
         image: "/screenshots/tc.png",
 
 
