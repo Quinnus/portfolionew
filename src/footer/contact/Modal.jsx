@@ -54,15 +54,15 @@ export default function Modal(props) {
                                 <input type="email" size="35" id="your-email-input"
                                        onChange={(e) => setUserEmail(e.target.value)}
                                 ></input>
-                                <label htmlFor="your-budget-input">Budget: </label>
-                                <select id="your-budget-input"
-                                        onChange={(e) => setUserBudget(e.target.value)}>
-                                    <option value="">--Choose a value (optional)--</option>
-                                    <option value="low">upto $/€/£1,000</option>
-                                    <option value="med">upto $/€/£3,000</option>
-                                    <option value="high">upto $/€/£5,000</option>
-                                    <option value="veryhigh">over $/€/£5,000</option>
-                                </select>
+                                {/*<label htmlFor="your-budget-input">Budget: </label>*/}
+                                {/*<select id="your-budget-input"*/}
+                                {/*        onChange={(e) => setUserBudget(e.target.value)}>*/}
+                                {/*    <option value="">--Choose a value (optional)--</option>*/}
+                                {/*    <option value="low">upto $/€/£1,000</option>*/}
+                                {/*    <option value="med">upto $/€/£3,000</option>*/}
+                                {/*    <option value="high">upto $/€/£5,000</option>*/}
+                                {/*    <option value="veryhigh">over $/€/£5,000</option>*/}
+                                {/*</select>*/}
                                 <label htmlFor="your-message-input">Message:</label>
                                 <textarea rows="4" cols="35" id="your-message-input"
                                           onChange={(e) => setUserMessage(e.target.value)}/>

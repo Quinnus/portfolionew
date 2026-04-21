@@ -32,10 +32,11 @@ option {
 textarea {
     resize: vertical;
     font-size: 1.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
     accent-color: var(--accent);
     caret-color: var(--accent);
     outline-color: var(--accent);
+    margin-bottom: 3rem;
 
 }
 
@@ -46,7 +47,7 @@ form {
 input {
     height: 2.4rem;
     font-size: 1.5rem;
-    padding: 1.2rem;
+    padding: 1.2rem 1.2rem 1.4rem 1.2rem;
     accent-color: var(--accent);
     caret-color: var(--accent);
     outline-color: var(--accent);
