@@ -32,16 +32,10 @@ export default function Footer() {
                 </div>
 
                 <div className="contact-item">
-                    <a className="icon-button" href="https://www.linkedin.com/in/john-quinn-dubie/" target="_blank" rel="noopener noreferrer">
+                    <a className="icon-button" href="https://www.linkedin.com/in/john-quinn-dubie/" target="_blank"
+                       rel="noopener noreferrer">
                         <FaLinkedin className="social-icon"/>
                         <span className="contact-tt">LinkedIn</span>
-                    </a>
-                </div>
-
-                <div className="contact-item">
-                    <a className="icon-button" href="https://wa.me/353831533484" target="_blank" rel="noopener noreferrer">
-                        <FaSquareWhatsapp className="social-icon"/>
-                        <span className="contact-tt">WhatsApp</span>
                     </a>
                 </div>
 
