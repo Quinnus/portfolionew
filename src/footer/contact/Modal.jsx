@@ -6,41 +6,38 @@ import emailjs from '@emailjs/browser';
 export default function Modal(props) {
 
     const [confirmationVisible, setConfirmationVisible] = useState(false);
+    const [sendError, setSendError] = useState(false);
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
-    const [userBudget, setUserBudget] = useState("");
 
+    const canSend = userName !== "" && userEmail !== "" && userMessage !== "";
 
-    const setSendEnabled = userName !== "" && userEmail !== "" && userMessage !== "";
-
-    async function handleClickSend() {
+    async function handleClickSend(e) {
+        e.preventDefault();
+        if (!canSend) return;
+        setSendError(false);
         try {
             await emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 {
-                    userName: userName,
-                    userEmail: userEmail,
-                    userBudget: userBudget,
-                    userMessage: userMessage,
+                    userName,
+                    userEmail,
+                    userMessage,
                 },
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
             setConfirmationVisible(true);
-
         } catch (error) {
             console.error('EmailJS error:', error);
+            setSendError(true);
         }
     }
 
 
     return (
         <div className="modalOverlay" onClick={props.handleCancelClick}>
-            <form onSubmit={async (e) => {
-                e.preventDefault();
-                await handleClickSend();
-                setConfirmationVisible(true);
-            }}>
+            <form onSubmit={handleClickSend}>
                 <div className="modalBox" onClick={(e) => e.stopPropagation()}>
                     {confirmationVisible ? (<ConfirmationMessage handleMessageOkClick={props.handleMessageOkClick}/>)
                         :
@@ -66,9 +63,11 @@ export default function Modal(props) {
                                 <label htmlFor="your-message-input">Message:</label>
                                 <textarea rows="4" cols="35" id="your-message-input"
                                           onChange={(e) => setUserMessage(e.target.value)}/>
+                                {sendError && (
+                                    <p className="send-error">Something went wrong — please try again.</p>
+                                )}
                                 <div className="actionButtons">
-                                    <button type="submit" disabled={!setSendEnabled}>Send
-                                    </button>
+                                    <button type="submit" disabled={!canSend}>Send</button>
                                     <button type="button" onClick={props.handleCancelClick}>Cancel</button>
                                 </div>
                             </>)

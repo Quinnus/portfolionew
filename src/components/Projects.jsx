@@ -26,10 +26,10 @@ export default function Projects() {
                         transition={{
                             duration: 1.6,
                             ease: [0.22, 1, 0.36, 1],
-                            delay: 0.4
+                            delay: 0.1
                         }}
                     >
-                        <img className="project-img" src={p.image} alt="screenshot"/>
+                        <img className="project-img" src={p.image} alt={p.name}/>
                         <div className="card-content">
                             <p className="projectname"><strong>Project name: </strong> {p.name}</p>
                             <p><strong>Description: </strong>{p.desc}</p>
